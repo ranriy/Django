@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friends</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+<h2 id = "greet">Hello, {{user.name}}!</h2>
+<a id="greet" href='/logout'>Logout</a>
+<p >Here's a list of your friends</p>
+<div class = "w">
+{% if num == 0 %}
+	<p>You donot have any friends yet</p>
+{% endif %}
+
+{% if num != 0 %}
+<table>
+	<thead>
+		<tr>
+			<th>Alias</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for f in all_friends %}
+			<tr>
+				<td>{{f.alias}}</td>
+				<td><a href = '/view/{{f.id}}'> View Profile</a>
+				<a href = '/remove/{{f.id}}'>Remove as friend</a></td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endif %}
+</div>
+
+<p>Other Users not on your list</p>
+<table>
+	<thead>
+		<tr>
+			<th>Alias</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for f in non_friends %}
+			{% if f != user %}
+				<tr>
+					<td><a href = '/view/{{f.id}}'>{{f.alias}}</a></td>
+					<td><a href = '/add/{{f.id}}'><button>Add as friend</button> </a></td>
+				</tr>
+			{% endif %}
+		{% endfor %}
+	</tbody>
+</table>
+
+</body>
+</html>

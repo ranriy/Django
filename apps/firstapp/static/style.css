@@ -1,0 +1,58 @@
+/*body {
+	padding: 50px;
+}*/
+
+.block{
+	display: inline-block;
+	width: 35%;
+    vertical-align: top;
+    border: solid black thin;
+    padding:30px;
+    
+    margin: 10px;
+
+}
+
+
+#middle {
+	display: inline-block;
+	width: 20%;
+}
+
+/*.w{
+	width:500px;
+	margin:0 auto;
+	border:solid black thin;
+}*/
+
+#greet{
+	display: inline-block;
+	margin-right:480px;
+}
+td
+{
+	
+	border: 1px solid black;
+    margin-left: 10px;
+    text-align:center;
+    
+}
+
+th
+{
+	border: 1px solid black;
+    background-color: lightgrey; 
+
+}
+
+
+table{
+	border-collapse:collapse;
+	padding:20px;
+	border: 1px solid black;
+}
+
+a{
+	margin-right: 30px;
+}
+

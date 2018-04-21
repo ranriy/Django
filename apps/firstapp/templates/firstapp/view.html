@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{user.name}}</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<a href='/logout'>Logout</a>
+	<a href='/display'>Home</a>
+	<h3>{{user.name}}'s' Profile</h3>
+	<p>Name: {{user.name}}</p>
+	<p>Email: {{user.email}}</p>
+</body>
+</html>
